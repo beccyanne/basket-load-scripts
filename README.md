@@ -7,12 +7,14 @@ http://jmeter.apache.org/download_jmeter.cgi
 You can get JMeter setup using these instructions:
 http://jmeter.apache.org/usermanual/get-started.html
 
-## Opening the scripts
+## Opening the scripts inside the JMeter GUI
 * Clone this project into your file system
+* Open JMeter (generally, ./jmeter from the bin directory of where you have JMeter installed)
 * File -> Open -> Select .jmx file from cloned directory
 
 ## Thread groups
-This project has a selection of thread groups, please expand the thread group you want to run (SIT2, Perf or Prod). The project is set by default to "light load profile", which means that it will run 50 threads over a 200 second ramp up period. If you want to run it for a single thread, just to see it work, then please set thread count to 1 and ramp up to 1.
+This project has a single thread group (Users). It is currently set to 1 thread with a ramp up time of 1 second.
 
-## Running the script
-Once you have expanded the thread group you want, you can select the "View Results Tree" section, and then you can select the green arrow beneath the toolbar. You should see a successful test run (depending on threadcount values selecting, it may take some time to complete). If for any reason you see red crosses next to the HTTP calls - you can select that entry, and then hit the "Response data" tab and see what's coming back.
+## Running the script from command line (recommended)
+From the bin directory of JMeter, you can run the following command:
+`./jmeter -Jkey=<key> -Jsecret_key=<secret_key> -Jsession_endpoint=api-<env>.marksandspencer.com/v1/userprofile/guestsession? -Jbasket_endpoint=api-<env>.marksandspencer.com/basket/v2? -n -t "/<path>/add_remove_basket.jmx"`
