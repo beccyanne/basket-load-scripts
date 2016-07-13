@@ -9,7 +9,7 @@ http://jmeter.apache.org/usermanual/get-started.html
 
 ## Opening the scripts inside the JMeter GUI
 * Clone this project into your file system
-* Open JMeter (generally, ./jmeter from the bin directory of where you have JMeter installed)
+* Open JMeter (generally, `./jmeter` from the bin directory of where you have JMeter installed)
 * File -> Open -> Select .jmx file from cloned directory
 
 ## Thread groups
